@@ -1,4 +1,4 @@
-# Database/The Magical Marvels of MongoDB
+# Database/NoSQL/The Magical Marvels of MongoDB
 
 MongoDB acts as the database that stores data for your application. Explore the basics and learn to store data in a document-oriented database.
 
