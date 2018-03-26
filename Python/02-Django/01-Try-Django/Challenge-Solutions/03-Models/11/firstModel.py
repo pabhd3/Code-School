@@ -1,3 +1,9 @@
+# Python
+# Django
+# Try Django
+# Templates (Level 3)
+# Challenge 11 - create a simple model
+
 from django.db import models
 
 class Location(models.Model):
