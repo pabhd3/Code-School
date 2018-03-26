@@ -2,7 +2,7 @@
 # Django
 # Try Django
 # Getting Started (Level 1)
-# Challenge 01 - Create a simple view
+# Challenge 02 - create a simple URL pattern
 
 from django.conf.urls import url
 from django.contrib import admin

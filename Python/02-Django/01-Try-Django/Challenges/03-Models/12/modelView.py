@@ -1,7 +1,7 @@
 # Python
 # Django
 # Try Django
-# Templates (Level 2)
+# Templates (Level 3)
 # Challenge 12 - Refactor view to use model
 
 from django.shortcuts import render
