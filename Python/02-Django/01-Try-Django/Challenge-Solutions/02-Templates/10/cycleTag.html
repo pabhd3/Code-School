@@ -1,0 +1,69 @@
+<!-- Python
+     Django
+     Try Django
+     Templates (Level 2)
+     Challenge 10 - Add a cycle tag to a template -->
+
+{% load staticfiles %}
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link href="{% static 'bootstrap.min.css' %}" rel="stylesheet" media="screen" />
+    <link href="{% static 'styles.css' %}" rel="stylesheet" media="screen" />
+    <title>Food Tracker</title>
+  </head>
+  <body>
+
+    <nav class="navbar navbar-default navbar-static-top" role="navigation">
+      <a class="navbar-brand" href="/"><img src="{% static 'images/banner.jpg' %}" height=200 alt="Food Tracker Brand" /></a>
+    </nav>
+
+    <main class="container">
+
+      {% for location in locations %}
+      <!-- Add a Django Template Language cycle tag on line 26 to cycle between tracker-left and tracker-right -->
+      <div class="tracker panel panel-default {% cycle 'tracker-left' 'tracker-right'%}">
+        <div class="panel-heading">
+          <h2 class="panel-title">{{ location.name }}</h2>
+        </div>
+        <div class="panel-body">
+          <div class="tracker-photo">
+            <img src="{{ location.image }}" alt="" height="150" />
+          </div>
+          <table class="tracker-table">
+            <tr>
+              <th>
+                <img src="{% static 'images/tracker.png' %}" alt="Location Icon" width="25" />
+                Location:
+              </th>
+              <td>{{ location.name }}</td>
+            </tr>
+            <tr>
+              <th>
+                <img src="{% static 'images/restaurant.png' %}" alt="Restaurant Icon" width="25" />
+                Number of Restaurants:
+              </th>
+              <td>{{ location.num_franchises }}</td>
+            </tr>
+            <tr>
+              <th>
+                <img src="{% static 'images/flavor.png' %}" alt="Flavor Icon" width="25" />
+                Flavors:
+              </th>
+              <td>{{ location.flavors }}</td>
+            </tr>
+          </table>
+        </div>
+      </div>
+      {% endfor %}
+
+    </main>
+
+    <footer class="footer" role="contentinfo">
+      <div class="container">
+        <p class="text-muted">&copy; Food Tracker 2018</p>
+      </div>
+    </footer>
+  </body>
+</html>

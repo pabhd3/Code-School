@@ -1,0 +1,21 @@
+<!-- Python
+Django
+Try Django
+Templates (Level 2)
+Challenge 08 - Render a list in a template -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>TravelTracker</title>
+</head>
+<body>
+    <h1>TravelTracker</h1>
+    {% for location in locations %} <!-- For loop added -->
+    <p>{{ location.name }}</p> <!-- paragraph tags added -->
+    <p>{{ location.flavors }}</p>
+    <img src="{{ location.image }}" width="80" /> <!-- image tag added -->
+    {% endfor %}
+</body>
+</html>
